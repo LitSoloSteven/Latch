@@ -51,6 +51,19 @@ Resultados comprobados mediante Git y API el 26 de octubre de 2026, America/Mana
 - Rulesets [versiones inmutables, 25935181](https://github.com/LitSoloSteven/Latch/rules/25935181) y [creación de versiones, 25935183](https://github.com/LitSoloSteven/Latch/rules/25935183) activos para `v*`; la excepción del propietario para crear no permite actualizar o eliminar versiones.
 - Primera ejecución real sobre `b58d06034d688fe1c32f61d060208ebafb34ee07`: [CI 40454658427](https://github.com/LitSoloSteven/Latch/actions/runs/40454658427) y [Policy 40454658435](https://github.com/LitSoloSteven/Latch/actions/runs/40454658435), ambas satisfactorias. Las reglas se activaron después de verificar esos nombres, resultados y proveedor. Los cambios posteriores de la PR deben repetir ambos checks antes de integrar.
 - Sintaxis PowerShell y YAML/JSON válidas; ocho casos de mensajes comprobados; evento real de PR aceptado localmente y ramas/títulos inválidos rechazados; `git diff --check` correcto.
-- Project pendiente de creación: la credencial dispone de los alcances `repo`, `workflow` y `gist`, pero la API de Projects requiere `project`. La guía incluye el procedimiento de creación desde la cuenta de Steven, con sus campos y vistas.
+- En la configuración inicial del 26 de octubre, el Project quedó pendiente porque la credencial dispone de los alcances `repo`, `workflow` y `gist`, mientras la API de Projects requiere `project`. Su creación se completó el 27 de octubre desde la cuenta de Steven, como se detalla a continuación.
 
-La PR debe revisarse desde otra cuenta y sigue abierta. CODEOWNERS, formularios, hooks compartidos, workflows y Dependabot se incorporarán a la rama predeterminada al integrar. Las protecciones, ajustes, etiquetas, hitos e invitaciones remotos ya están aplicados. El Project, la aceptación de invitaciones, las firmas personales y la aprobación ajena continúan pendientes de sus titulares.
+La PR debe revisarse desde otra cuenta y sigue abierta. CODEOWNERS, formularios, hooks compartidos, workflows y Dependabot se incorporarán a la rama predeterminada al integrar. Las protecciones, ajustes, etiquetas, hitos e invitaciones remotos ya están aplicados. La aceptación de invitaciones, las firmas personales y la aprobación ajena continúan pendientes de sus titulares.
+
+## Project configurado el 27 de octubre de 2026
+
+- [Latch - Plan de implementacion, Project #1](https://github.com/users/LitSoloSteven/projects/1), de la cuenta `LitSoloSteven`, creado con visibilidad privada. Aparece vinculado en la sección Projects del repositorio Latch y utiliza ese repositorio como predeterminado.
+- Descripción y README del Project con el procedimiento del equipo y la distinción entre integración técnica y aceptación D47.
+- Status con seis opciones, en este orden: Preparada, En curso, En revisión, En prueba, Terminada y Bloqueada. Sin valor predeterminado: la entrada a Preparada requiere triage.
+- Campos de texto TAR y RA; campos numéricos Horas estimadas y Horas reales; fechas Inicio y Fin; selecciones Módulo (M01 a M12 y Transversal), Sprint (Sprint 0 a 4 y Cierre) y Severidad (Crítica, Alta, Media y Baja).
+- Cuatro vistas guardadas: Tablero por Status, Tabla por sprint, Hoja de ruta agrupada por Sprint con Inicio/Fin y Bloqueadas con filtro `status:Bloqueada`.
+- Automatizaciones predeterminadas desactivadas. Los eventos de vinculación, merge, cierre y cambio de estado no cierran incidencias ni sustituyen la aceptación del equipo.
+- Issue #1 / TAR-004 incorporado en En curso, con M12, Sprint 0 y dos horas estimadas. Horas reales, RA, fechas y severidad permanecen sin completar. La etiqueta del issue `estado:En curso` coincide con Status. El issue permanece abierto.
+- Configuración comprobada tras recargar el tablero; agrupación y fechas de la hoja de ruta, filtro de Bloqueadas y datos de TAR-004 verificados. La especificación de los campos y vistas se conserva en `config/project.json`.
+
+Los accesos al Project privado se administran de forma independiente del repositorio. La credencial HTTPS mantiene sus alcances originales y la automatización por API sigue sin habilitarse. La carga del resto del catálogo TAR y el registro de avances corresponden a la planificación del equipo.

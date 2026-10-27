@@ -102,7 +102,7 @@ Los colaboradores de este repositorio personal reciben escritura. Las responsabi
 
 `config/labels.json` conserva 47 etiquetas. `config/milestones.json` contiene seis períodos y diez HIT con las fechas del Plan, convertidas desde el fin del día de Managua a UTC. Crear un milestone no declara entregado su contenido. Una TAR usa el milestone de su período; el seguimiento de un HIT se registra aparte porque un issue admite un solo milestone.
 
-La creación del Project está pendiente porque la credencial HTTPS tiene los alcances `repo`, `workflow` y `gist`, sin acceso a Projects. Steven puede crearlo desde su cuenta en **Your profile → Projects → New project**, con el nombre `Latch - Plan de implementacion`, vincular Latch y configurar estos campos:
+El [Project Latch - Plan de implementacion](https://github.com/users/LitSoloSteven/projects/1) está creado en la cuenta de Steven y vinculado al repositorio Latch, que también es el repositorio predeterminado para nuevas incidencias. Su visibilidad es privada. Estos son los campos configurados:
 
 | Campo | Tipo y valores |
 | --- | --- |
@@ -115,9 +115,18 @@ La creación del Project está pendiente porque la credencial HTTPS tiene los al
 | Severidad | Selección: Crítica, Alta, Media, Baja |
 | Inicio / Fin | Dos campos de fecha |
 
-El tablero utiliza las vistas Tablero por Status, Tabla por Sprint, Hoja de ruta con Inicio/Fin y Bloqueadas. Se agrega el issue TAR-004 #1 y después las TAR del catálogo, conservando sus responsables y estimaciones originales. El cierre de una TAR requiere aceptación D47; el merge de una PR no activa su cierre automático.
+El tablero tiene cuatro vistas guardadas:
 
-`PROJECT_TOKEN` se conserva fuera del código. La automatización de Projects requiere permisos propios y configuración adicional. El tablero y las invitaciones pendientes se detallan en el registro de configuración.
+- **Tablero:** columnas por Status; las tarjetas muestran responsable, TAR, módulo, sprint y horas estimadas.
+- **Tabla por sprint:** agrupación por Sprint y columnas con los campos de seguimiento.
+- **Hoja de ruta:** agrupación por Sprint y fechas Inicio/Fin.
+- **Bloqueadas:** tabla filtrada por `status:Bloqueada`.
+
+El [issue TAR-004 #1](https://github.com/LitSoloSteven/Latch/issues/1) está incorporado en En curso, con módulo M12, Sprint 0 y las dos horas estimadas del Plan. Steven mantiene el seguimiento del issue; Aris conserva la responsabilidad nominal del Plan. Las horas reales y las fechas siguen sin completar. Las demás TAR se incorporan desde el catálogo, conservando sus responsables y estimaciones originales.
+
+Las automatizaciones predeterminadas del Project están desactivadas y Status no tiene un valor predeterminado. El equipo realiza el triage y registra los cambios de estado; el cierre de una TAR requiere aceptación D47.
+
+La credencial HTTPS actual conserva los alcances `repo`, `workflow` y `gist`; la gestión de Projects por API necesita `project`. La operación del tablero se realiza desde GitHub. Si se incorpora automatización por API, `PROJECT_TOKEN` se conserva fuera del código. Los accesos al Project privado se administran por separado de las invitaciones al repositorio.
 
 ## 7. Administración y recuperación
 

@@ -23,6 +23,7 @@ Configura `JAVA_HOME` con la ruta de tu JDK 21 si no está disponible en la term
 `main` es la única rama permanente. Los cambios se proponen en ramas cortas mediante PR, con revisión de otra persona y squash. ADR-15 descarta `develop` permanente.
 
 - [Guía de trabajo del equipo](docs/GUIA_GITHUB.md)
+- [Project: plan de implementación](https://github.com/users/LitSoloSteven/projects/1)
 - [Registro de configuración y límites de la CI](docs/CONFIGURACION_GITHUB.md)
 - [Estrategia GitFlow corregida](docs/Latch_Estrategia_Gitflow_APA7_corregida.pdf)
 
