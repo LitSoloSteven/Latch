@@ -1,0 +1,237 @@
+[
+  {
+    "name": "tipo:tarea",
+    "color": "DCEBFA",
+    "description": "tipo: tarea. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "tipo:defecto",
+    "color": "DCEBFA",
+    "description": "tipo: defecto. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "tipo:cambio",
+    "color": "DCEBFA",
+    "description": "tipo: cambio. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "tipo:riesgo",
+    "color": "DCEBFA",
+    "description": "tipo: riesgo. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "tipo:decision",
+    "color": "DCEBFA",
+    "description": "tipo: decision. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "tipo:prueba",
+    "color": "DCEBFA",
+    "description": "tipo: prueba. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "tipo:documentacion",
+    "color": "DCEBFA",
+    "description": "tipo: documentacion. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M01",
+    "color": "E2E8F0",
+    "description": "módulo: M01. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M02",
+    "color": "E2E8F0",
+    "description": "módulo: M02. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M03",
+    "color": "E2E8F0",
+    "description": "módulo: M03. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M04",
+    "color": "E2E8F0",
+    "description": "módulo: M04. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M05",
+    "color": "E2E8F0",
+    "description": "módulo: M05. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M06",
+    "color": "E2E8F0",
+    "description": "módulo: M06. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M07",
+    "color": "E2E8F0",
+    "description": "módulo: M07. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M08",
+    "color": "E2E8F0",
+    "description": "módulo: M08. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M09",
+    "color": "E2E8F0",
+    "description": "módulo: M09. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M10",
+    "color": "E2E8F0",
+    "description": "módulo: M10. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M11",
+    "color": "E2E8F0",
+    "description": "módulo: M11. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "módulo:M12",
+    "color": "E2E8F0",
+    "description": "módulo: M12. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "prioridad:Must",
+    "color": "FFF1B8",
+    "description": "prioridad: Must. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "prioridad:Should",
+    "color": "FFF1B8",
+    "description": "prioridad: Should. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "prioridad:Could",
+    "color": "FFF1B8",
+    "description": "prioridad: Could. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "severidad:Crítica",
+    "color": "FFDADB",
+    "description": "severidad: Crítica. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "severidad:Alta",
+    "color": "FFDADB",
+    "description": "severidad: Alta. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "severidad:Media",
+    "color": "FFDADB",
+    "description": "severidad: Media. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "severidad:Baja",
+    "color": "FFDADB",
+    "description": "severidad: Baja. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "estado:Preparada",
+    "color": "D8F3E5",
+    "description": "estado: Preparada. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "estado:En curso",
+    "color": "D8F3E5",
+    "description": "estado: En curso. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "estado:En revisión",
+    "color": "D8F3E5",
+    "description": "estado: En revisión. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "estado:En prueba",
+    "color": "D8F3E5",
+    "description": "estado: En prueba. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "estado:Terminada",
+    "color": "D8F3E5",
+    "description": "estado: Terminada. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "estado:Bloqueada",
+    "color": "D8F3E5",
+    "description": "estado: Bloqueada. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "cierre:con-evidencia",
+    "color": "D8F3E5",
+    "description": "cierre: con-evidencia. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "sprint:0",
+    "color": "EDE2F7",
+    "description": "sprint: 0. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "sprint:1",
+    "color": "EDE2F7",
+    "description": "sprint: 1. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "sprint:2",
+    "color": "EDE2F7",
+    "description": "sprint: 2. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "sprint:3",
+    "color": "EDE2F7",
+    "description": "sprint: 3. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "sprint:4",
+    "color": "EDE2F7",
+    "description": "sprint: 4. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "sprint:Cierre",
+    "color": "EDE2F7",
+    "description": "sprint: Cierre. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "ra:RA1",
+    "color": "D8F0F5",
+    "description": "ra: RA1. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "ra:RA2",
+    "color": "D8F0F5",
+    "description": "ra: RA2. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "ra:RA3",
+    "color": "D8F0F5",
+    "description": "ra: RA3. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "ra:RA4",
+    "color": "D8F0F5",
+    "description": "ra: RA4. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "ra:RA5",
+    "color": "D8F0F5",
+    "description": "ra: RA5. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "riesgo:bajo",
+    "color": "FFE6CC",
+    "description": "riesgo: bajo. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "riesgo:medio",
+    "color": "FFE6CC",
+    "description": "riesgo: medio. Catalogo de la estrategia de Latch."
+  },
+  {
+    "name": "riesgo:alto",
+    "color": "FFE6CC",
+    "description": "riesgo: alto. Catalogo de la estrategia de Latch."
+  }
+]
