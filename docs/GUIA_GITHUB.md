@@ -5,7 +5,7 @@ Repositorio: [LitSoloSteven/Latch](https://github.com/LitSoloSteven/Latch). Conf
 ## 1. Qué debes hacer tú primero
 
 1. Pide a **CTardencilla**, **Arisgav** y **wetalff** que acepten sus invitaciones a Latch desde su cuenta de GitHub. Una invitación pendiente todavía no concede acceso efectivo.
-2. Pide a Aris o Caleb que revise la PR de configuración desde su propia cuenta. Debe revisar el código, los scripts y los documentos, esperar los checks `ci` y `policy`, y aprobar si corresponde. El autor no puede aportar la aprobación ajena.
+2. Pide a Aris o Caleb que revise la [PR de configuración #2](https://github.com/LitSoloSteven/Latch/pull/2) desde su propia cuenta. Debe revisar el código, los scripts y los documentos, esperar los checks `ci` y `policy`, y aprobar si corresponde. El autor no puede aportar la aprobación ajena. GitHub no permite solicitarles revisión mientras la invitación siga pendiente.
 3. Cuando GitHub permita integrar, usa **Squash and merge**. Copia íntegro el bloque `Squash message` de la PR al mensaje final; comprueba cabecera y `Refs`. No elimines las reglas para evitar la revisión.
 4. Después del merge, ejecuta en este proyecto:
 
@@ -102,7 +102,20 @@ Los colaboradores de este repositorio personal reciben escritura. Las responsabi
 
 `config/labels.json` conserva 47 etiquetas. `config/milestones.json` contiene seis períodos y diez HIT con las fechas del Plan, convertidas desde el fin del día de Managua a UTC. Crear un milestone no declara entregado su contenido. Una TAR usa el milestone de su período; el seguimiento de un HIT se registra aparte porque un issue admite un solo milestone.
 
-El Project previsto utiliza seis estados y los campos TAR, Módulo, Horas estimadas, Horas reales, Sprint, RA, Severidad, Inicio y Fin. Si la autenticación no permite Projects, crea el tablero desde tu cuenta: **Your profile → Projects → New project**. Nómbralo `Latch - Plan de implementacion`, vincula Latch y añade los campos descritos. Guarda las vistas Tablero por Status, Tabla por Sprint, Hoja de ruta con Inicio/Fin y Bloqueadas. No actives automatización que cierre una TAR por el mero merge de una PR.
+El Project no pudo crearse: la credencial HTTPS tiene `repo`, `workflow` y `gist`, sin acceso a Projects. El control de Edge también se detuvo al no poder verificar la URL. Crea el tablero desde tu cuenta: **Your profile → Projects → New project**. Nómbralo `Latch - Plan de implementacion`, vincula Latch y configura estos campos:
+
+| Campo | Tipo y valores |
+| --- | --- |
+| Status | Selección: Preparada, En curso, En revisión, En prueba, Terminada, Bloqueada |
+| TAR | Texto; identificador del catálogo, independiente del número GitHub |
+| Módulo | Selección: M01 a M12 y Transversal |
+| Horas estimadas / Horas reales | Dos campos numéricos; reales vacío hasta registrar trabajo |
+| Sprint | Selección: Sprint 0, Sprint 1, Sprint 2, Sprint 3, Sprint 4, Cierre |
+| RA | Texto: RA1 a RA5; justifica No aplica |
+| Severidad | Selección: Crítica, Alta, Media, Baja |
+| Inicio / Fin | Dos campos de fecha |
+
+Guarda las vistas Tablero por Status, Tabla por Sprint, Hoja de ruta con Inicio/Fin y Bloqueadas. Agrega el issue TAR-004 #1 y después las TAR del catálogo, conservando sus responsables y estimaciones originales. No actives automatización que cierre una TAR por el mero merge de una PR.
 
 No guardes `PROJECT_TOKEN` en código. La automatización de Projects requiere permisos propios y configuración adicional; la creación de YAML no los concede. El tablero y las invitaciones pendientes se detallan en el registro de configuración.
 

@@ -39,4 +39,18 @@ Los workflows de PR ejecutan código con permisos de lectura y sin secretos de p
 
 ## Resultado remoto
 
-Pendiente de completar con consultas a GitHub al finalizar la aplicación. Los archivos preparados no acreditan por sí mismos ajustes remotos activos. La PR debe revisarse desde otra cuenta antes de integrarse; no se autoaprueba.
+Resultados comprobados mediante Git y API el 26 de octubre de 2026, America/Managua:
+
+- `origin` y seguimiento local conectados. La rama de configuración se publicó y el historial inicial remoto se conserva.
+- [PR #2](https://github.com/LitSoloSteven/Latch/pull/2) abierta hacia `main`; [issue #1 / TAR-004](https://github.com/LitSoloSteven/Latch/issues/1) abierto, sin declarar aceptación ni horas reales. Se asignó seguimiento a Steven; Aris conserva la responsabilidad nominal de TAR-004 en el Plan.
+- Squash y merge habilitados en General; rebase merge y auto-merge deshabilitados; eliminación de rama integrada habilitada. El ruleset de `main` limita su integración a squash.
+- Secret scanning y push protection habilitados; alertas de vulnerabilidades habilitadas; permisos predeterminados de workflows en lectura, sin permitir que Actions apruebe PR.
+- Las 47 etiquetas del proyecto se agregaron conservando las 10 preexistentes: 57 en total. Los 16 milestones se crearon con sus fechas oficiales.
+- Invitaciones con escritura enviadas a `CTardencilla`, `Arisgav` y `wetalff`; pendientes de aceptación en la consulta final. GitHub rechazó solicitar revisión porque todavía no son colaboradores efectivos. No se usaron sus cuentas ni se aportó una aprobación en su nombre.
+- Ruleset [main protegida, 25935179](https://github.com/LitSoloSteven/Latch/rules/25935179) activo, sin bypass: PR, una aprobación ajena y del último push, Code Owner, conversaciones resueltas, descarte de aprobaciones obsoletas, historial lineal, squash, prohibición de borrado/force push y checks estrictos `ci`/`policy` vinculados a GitHub Actions (app 15368).
+- Rulesets [versiones inmutables, 25935181](https://github.com/LitSoloSteven/Latch/rules/25935181) y [creación de versiones, 25935183](https://github.com/LitSoloSteven/Latch/rules/25935183) activos para `v*`; la excepción del propietario para crear no permite actualizar o eliminar versiones.
+- Primera ejecución real sobre `b58d06034d688fe1c32f61d060208ebafb34ee07`: [CI 40454658427](https://github.com/LitSoloSteven/Latch/actions/runs/40454658427) y [Policy 40454658435](https://github.com/LitSoloSteven/Latch/actions/runs/40454658435), ambas satisfactorias. Las reglas se activaron después de verificar esos nombres, resultados y proveedor. Los cambios posteriores de la PR deben repetir ambos checks antes de integrar.
+- Sintaxis PowerShell y YAML/JSON válidas; ocho casos de mensajes comprobados; evento real de PR aceptado localmente y ramas/títulos inválidos rechazados; `git diff --check` correcto.
+- Project sin crear: GraphQL rechazó el alcance de la credencial (`repo`, `workflow`, `gist`; requiere `project`). El control de Edge terminó porque no pudo verificar la URL de Windows con suficiente confianza. No se amplió el token ni se eludió esa restricción. La guía incluye creación manual, campos y vistas.
+
+La PR debe revisarse desde otra cuenta y sigue abierta. CODEOWNERS, formularios, hooks compartidos, workflows y Dependabot se incorporarán a la rama predeterminada al integrar. Las protecciones, ajustes, etiquetas, hitos e invitaciones remotos ya están aplicados. El Project, la aceptación de invitaciones, las firmas personales y la aprobación ajena continúan pendientes de sus titulares.

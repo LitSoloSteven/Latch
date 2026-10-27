@@ -20,7 +20,10 @@ function Invoke-GitHub([string]$Method, [string]$Path, $Body = $null) {
         $request.Body = [Text.Encoding]::UTF8.GetBytes(($Body | ConvertTo-Json -Depth 40 -Compress))
         $request.ContentType = 'application/json; charset=utf-8'
     }
-    Invoke-RestMethod @request
+    $response = Invoke-RestMethod @request
+    if ($response -is [array]) {
+        foreach ($item in $response) { Write-Output $item }
+    } else { $response }
 }
 
 try {
@@ -111,10 +114,15 @@ try {
 
     if ($Action -eq 'Inspect') {
         $repo | Select-Object full_name,default_branch,allow_squash_merge,allow_merge_commit,allow_rebase_merge,allow_auto_merge,delete_branch_on_merge,security_and_analysis
+        Write-Output ($repo.security_and_analysis | ConvertTo-Json -Depth 5 -Compress)
         Invoke-GitHub GET "repos/$repository/collaborators?per_page=100" | ForEach-Object { $_ | Select-Object login,role_name }
         Invoke-GitHub GET "repos/$repository/invitations?per_page=100" | ForEach-Object { $_ | Select-Object id,@{n='login';e={$_.invitee.login}},permissions }
         Invoke-GitHub GET "repos/$repository/rulesets?per_page=100" | ForEach-Object { $_ | Select-Object id,name,enforcement }
-        Write-Output ('Etiquetas: ' + @(Invoke-GitHub GET "repos/$repository/labels?per_page=100").Count)
+        $remoteLabels = @(Invoke-GitHub GET "repos/$repository/labels?per_page=100")
+        $expectedLabels = Get-Content "$root/config/labels.json" -Raw -Encoding utf8 | ConvertFrom-Json
+        $missing = @($expectedLabels | Where-Object { $_.name -notin $remoteLabels.name })
+        Write-Output ('Etiquetas totales: ' + $remoteLabels.Count + '; del proyecto: ' + ($expectedLabels.Count - $missing.Count) + '/' + $expectedLabels.Count)
+        if ($missing.Count) { throw ('Etiquetas pendientes: ' + ($missing.name -join ', ')) }
         Write-Output ('Milestones: ' + @(Invoke-GitHub GET "repos/$repository/milestones?state=all&per_page=100").Count)
     }
 } finally {
