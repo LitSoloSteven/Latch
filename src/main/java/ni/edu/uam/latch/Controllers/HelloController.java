@@ -1,4 +1,4 @@
-package ni.edu.uam.latch;
+package ni.edu.uam.latch.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-package ni.edu.uam.latch;
+package ni.edu.uam.latch.Application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
