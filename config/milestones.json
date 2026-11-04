@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Sprint 0",
+    "description": "Sprint 0 Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-10-28T05:59:59Z"
+  },
+  {
+    "title": "Sprint 1",
+    "description": "Sprint 1 Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-04T05:59:59Z"
+  },
+  {
+    "title": "Sprint 2",
+    "description": "Sprint 2 Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-11T05:59:59Z"
+  },
+  {
+    "title": "Sprint 3",
+    "description": "Sprint 3 Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-18T05:59:59Z"
+  },
+  {
+    "title": "Sprint 4",
+    "description": "Sprint 4 Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-26T05:59:59Z"
+  },
+  {
+    "title": "Cierre",
+    "description": "Cierre Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-12-02T05:59:59Z"
+  },
+  {
+    "title": "HIT-01",
+    "description": "v0.1.0; FXML y concurrencia Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-10-28T05:59:59Z"
+  },
+  {
+    "title": "HIT-02",
+    "description": "v0.2.0; dominio con ORM Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-04T05:59:59Z"
+  },
+  {
+    "title": "HIT-03",
+    "description": "Revision de laboratorio ORM Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-07T05:59:59Z"
+  },
+  {
+    "title": "HIT-04",
+    "description": "v0.3.0; circuito financiero Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-11T05:59:59Z"
+  },
+  {
+    "title": "HIT-05",
+    "description": "v0.4.0; diez reportes Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-18T05:59:59Z"
+  },
+  {
+    "title": "HIT-06",
+    "description": "Adaptador HTTP Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-22T05:59:59Z"
+  },
+  {
+    "title": "HIT-07",
+    "description": "v0.9.0-rc.1 congelada Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-26T05:59:59Z"
+  },
+  {
+    "title": "HIT-08",
+    "description": "Entrega interna y sesion Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-11-27T05:59:59Z"
+  },
+  {
+    "title": "HIT-09",
+    "description": "Ensayo final Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-12-01T05:59:59Z"
+  },
+  {
+    "title": "HIT-10",
+    "description": "v1.0.0 y cierre Fecha del Plan; no acredita entrega ni ejecucion.",
+    "due_on": "2026-12-02T05:59:59Z"
+  }
+]

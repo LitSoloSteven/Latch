@@ -1,0 +1,125 @@
+{
+  "name": "Cambio de alcance D44",
+  "description": "Solicitante, motivo, alternativas, impacto en horas/plazo/RA, responsable y resolucion pendiente.",
+  "title": "[D44] ",
+  "labels": [
+    "tipo:cambio"
+  ],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Completar el formulario no acredita aceptacion. No adjuntes secretos ni datos reales. TAR/CP/ADR se contrastan con los catalogos del Plan."
+      }
+    },
+    {
+      "type": "input",
+      "id": "identificador",
+      "attributes": {
+        "label": "Identificador del proyecto",
+        "placeholder": "D44"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "trazabilidad",
+      "attributes": {
+        "label": "Requisito o decision y trazabilidad",
+        "description": "RF/RN o decision de gestion; TAR/DEF, CP y RA aplicables. Justifica No aplica."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "modulo",
+      "attributes": {
+        "label": "Modulo principal",
+        "options": [
+          "M01",
+          "M02",
+          "M03",
+          "M04",
+          "M05",
+          "M06",
+          "M07",
+          "M08",
+          "M09",
+          "M10",
+          "M11",
+          "M12",
+          "Transversal"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "sprint",
+      "attributes": {
+        "label": "Periodo",
+        "options": [
+          "Sprint 0",
+          "Sprint 1",
+          "Sprint 2",
+          "Sprint 3",
+          "Sprint 4",
+          "Cierre"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "planificacion",
+      "attributes": {
+        "label": "Responsable, revisor, estimacion y precedencias",
+        "description": "Usuarios GitHub; revisor ajeno; horas estimadas del Plan y tareas previas. Las horas reales se registran despues."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "detalle",
+      "attributes": {
+        "label": "Descripcion y condiciones",
+        "description": "Solicitante, motivo, alternativas, impacto en horas/plazo/RA, responsable y resolucion pendiente."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "aceptacion",
+      "attributes": {
+        "label": "Criterios de aceptacion",
+        "description": "Criterios observables, CP/variantes y validacion necesaria antes del cierre D47."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "evidencia",
+      "attributes": {
+        "label": "Evidencia",
+        "description": "Enlaces, SHA, fecha y entorno; usa Pendiente y procedimiento hasta ejecutar. No inventes resultados."
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

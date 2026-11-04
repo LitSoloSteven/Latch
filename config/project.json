@@ -1,0 +1,28 @@
+{
+  "owner": "LitSoloSteven",
+  "number": 1,
+  "title": "Latch - Plan de implementacion",
+  "url": "https://github.com/users/LitSoloSteven/projects/1",
+  "visibility": "private",
+  "repository": "LitSoloSteven/Latch",
+  "fields": [
+    {"name": "Status", "type": "single_select", "options": ["Preparada", "En curso", "En revisión", "En prueba", "Terminada", "Bloqueada"], "default": null},
+    {"name": "TAR", "type": "text"},
+    {"name": "Módulo", "type": "single_select", "options": ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08", "M09", "M10", "M11", "M12", "Transversal"]},
+    {"name": "Horas estimadas", "type": "number"},
+    {"name": "Horas reales", "type": "number"},
+    {"name": "Sprint", "type": "single_select", "options": ["Sprint 0", "Sprint 1", "Sprint 2", "Sprint 3", "Sprint 4", "Cierre"]},
+    {"name": "RA", "type": "text"},
+    {"name": "Severidad", "type": "single_select", "options": ["Crítica", "Alta", "Media", "Baja"]},
+    {"name": "Inicio", "type": "date"},
+    {"name": "Fin", "type": "date"}
+  ],
+  "views": [
+    {"name": "Tablero", "layout": "board", "column_by": "Status", "fields": ["Title", "Assignees", "Status", "TAR", "Horas estimadas", "Módulo", "Sprint"]},
+    {"name": "Tabla por sprint", "layout": "table", "group_by": "Sprint"},
+    {"name": "Hoja de ruta", "layout": "roadmap", "group_by": "Sprint", "start_date": "Inicio", "target_date": "Fin"},
+    {"name": "Bloqueadas", "layout": "table", "group_by": "Sprint", "filter": "status:Bloqueada"}
+  ],
+  "default_workflows_enabled": false,
+  "initial_issue": {"url": "https://github.com/LitSoloSteven/Latch/issues/1", "TAR": "TAR-004", "Status": "En curso", "Módulo": "M12", "Sprint": "Sprint 0", "Horas estimadas": 2, "Horas reales": null}
+}

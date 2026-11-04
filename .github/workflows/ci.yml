@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    name: ci
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v4.7.1
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Registrar entorno
+        shell: pwsh
+        run: |
+          java -version
+          ./mvnw.cmd --version
+          "CI de arranque: compilacion y verify del esqueleto; no acredita cobertura, BD ni CP." >> $env:GITHUB_STEP_SUMMARY
+      - name: Maven verify
+        shell: pwsh
+        run: ./mvnw.cmd -B -ntp verify
