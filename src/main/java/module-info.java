@@ -5,4 +5,5 @@ module ni.edu.uam.latch {
 
     opens ni.edu.uam.latch to javafx.fxml;
     exports ni.edu.uam.latch;
+    exports ni.edu.uam.latch.modelo;
 }
