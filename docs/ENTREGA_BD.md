@@ -43,3 +43,19 @@ psql -h localhost -p 5432 -U $env:DB_USER -d latch_demo -W -c "SELECT id, nombre
 ```
 
 El usuario debe conservar el nombre actualizado, `activo = false` y `version = 2`.
+
+## Propiedades
+
+Después de cargar usuarios y el usuario sintético, crea la tabla y carga una propiedad de prueba. Usa el mismo acceso y `$classpath` de los pasos anteriores.
+
+```powershell
+psql -h localhost -p 5432 -U $env:DB_USER -d latch_demo -W -v ON_ERROR_STOP=1 -f db/005-propiedades.sql -f db/006-propiedades-demo.sql
+java -cp $classpath ni.edu.uam.latch.propiedad.PropiedadDemo demostrar
+$id = [guid](Read-Host 'UUID mostrado por la demostración')
+java -cp $classpath ni.edu.uam.latch.propiedad.PropiedadDemo verificar $id
+psql -h localhost -p 5432 -U $env:DB_USER -d latch_demo -W -c "SELECT id, nombre, direccion, activa, version FROM latch.propiedad WHERE id = '$id';"
+```
+
+La demostración crea un registro distinto de la propiedad que usará Unidades. Verifica consulta, listado, edición, baja lógica y rechazo de una dirección vacía y de un usuario de auditoría inexistente. El registro desactivado debe conservar el nombre y la dirección editados con `activa = false` y `version = 2`.
+
+La propiedad activa que puede referenciar Unidades tiene UUID `d4040000-0000-4000-8000-000000000001`. Para la prueba de conexión inválida, repite `verificar` apuntando `DB_URL` a una base inexistente y comprueba el código 1.
