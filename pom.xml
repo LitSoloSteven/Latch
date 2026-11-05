@@ -28,6 +28,13 @@
             <version>${javafx.version}</version>
         </dependency>
 
+        <!-- Driver JDBC de PostgreSQL para persistencia segun acuerdo tecnico de la entrega -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
