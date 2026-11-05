@@ -22,3 +22,24 @@ java -cp $classpath ni.edu.uam.latch.db.ConnectionCheck
 ```
 
 La comprobación debe imprimir `PostgreSQL: SELECT 1 -> 1`. Si la configuración falta o la conexión falla, el comando devuelve código 1 sin mostrar la URL, el usuario ni la contraseña.
+
+## Usuarios y roles
+
+En una base de demostración limpia, aplica los scripts en orden. `psql` solicita la contraseña y se detiene ante el primer error. Ajusta el host, puerto y base a tu configuración local.
+
+```powershell
+psql -h localhost -p 5432 -U $env:DB_USER -d latch_demo -W -v ON_ERROR_STOP=1 -f db/001-usuarios.sql -f db/002-usuarios-demo.sql
+java -cp $classpath ni.edu.uam.latch.usuario.UsuarioDemo demostrar
+```
+
+El primer script crea las tablas y los roles. El segundo carga el usuario sintético con UUID `d4030000-0000-4000-8000-000000000001`, que sirve como referencia `creado_por` para otras tablas de esta demostración. Su hash Argon2id corresponde a un valor aleatorio de prueba.
+
+La demostración comprueba el alta, la consulta por ID, el listado, el cambio del nombre visible, el rechazo de un duplicado y de un contador negativo, y la baja lógica. Al finalizar imprime el UUID del usuario creado. Copia ese UUID y arranca un segundo proceso para verificar que sigue persistido.
+
+```powershell
+$id = [guid](Read-Host 'UUID mostrado por la demostración')
+java -cp $classpath ni.edu.uam.latch.usuario.UsuarioDemo verificar $id
+psql -h localhost -p 5432 -U $env:DB_USER -d latch_demo -W -c "SELECT id, nombre_visible, activo, version FROM latch.usuario WHERE id = '$id';"
+```
+
+El usuario debe conservar el nombre actualizado, `activo = false` y `version = 2`.
