@@ -1,4 +1,4 @@
-package ni.edu.uam.demo;
+package ni.edu.uam.latch.demo;
 
 /** Evidencia de NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING y TERMINATED. */
 public class DemoEstadosHilo {
