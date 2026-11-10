@@ -43,10 +43,6 @@
           {
             "context": "ci",
             "integration_id": 15368
-          },
-          {
-            "context": "policy",
-            "integration_id": 15368
           }
         ]
       }
